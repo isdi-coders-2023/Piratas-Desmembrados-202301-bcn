@@ -4,7 +4,7 @@ const App = () => {
   return (
     <>
       <GlobalStyles />
-      <div className="container"></div>
+      <div className="container" data-testid="AppContainer"></div>
     </>
   );
 };
