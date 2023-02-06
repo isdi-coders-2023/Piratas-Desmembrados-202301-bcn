@@ -1,3 +1,6 @@
+import { createGlobalStyle } from "styled-components";
+
+export const GlobalStyles = createGlobalStyle`
 *,
 ::before,
 ::after {
@@ -17,3 +20,4 @@ ul {
   padding-left: 0;
   margin: 0;
 }
+`;
