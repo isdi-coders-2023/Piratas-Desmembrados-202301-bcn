@@ -1,4 +1,4 @@
-import { CharactersStructure } from "../../../../../data/types";
+import { CharactersStructure } from "../../../data/types";
 
 export enum CharactersActionType {
   loadCharacters,

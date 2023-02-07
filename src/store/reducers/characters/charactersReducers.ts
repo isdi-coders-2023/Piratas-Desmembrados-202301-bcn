@@ -3,7 +3,7 @@ import {
   CharactersAction,
   CharactersActionType,
   LoadCharacterAction,
-} from "../../contexts/characters/actions/characters/types";
+} from "../../actions/characters/types";
 
 const charactersReducer = (
   currentCharacter: CharactersStructure,
