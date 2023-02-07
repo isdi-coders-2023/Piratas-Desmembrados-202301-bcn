@@ -6,7 +6,7 @@ export interface LocationStructure {
   name: string;
 }
 
-export interface CharactersStructure {
+export interface CharacterStructure {
   id: number;
   name: string;
   status: string;
@@ -16,3 +16,5 @@ export interface CharactersStructure {
   location: LocationStructure;
   image: string;
 }
+
+export type CharactersStructure = CharactersStructure[];

@@ -1,8 +1,8 @@
 import { createContext } from "react";
-import { CharactersStructure } from "../../../data/types";
+import { CharacterStructure } from "../../../data/types";
 
 interface CharactersContextStructure {
-  characters: CharactersStructure;
+  characters: CharacterStructure;
 }
 
 const CharactersContext = createContext({} as CharactersContextStructure);
