@@ -2,8 +2,8 @@ import { CharactersStructure } from "../../../../../data/types";
 import { CharactersActionType, LoadCharacterAction } from "./types";
 
 export const loadCharactersActionCreator = (
-  character: CharactersStructure
+  characters: CharactersStructure
 ): LoadCharacterAction => ({
   type: CharactersActionType.loadCharacters,
-  payload: character,
+  payload: characters,
 });
