@@ -11,15 +11,11 @@ const charactersReducer = (
 ): CharactersStructure => {
   let newCharacter: CharactersStructure;
 
-  switch (action.type) {
-    case CharactersActionType.loadCharacters:
-      newCharacter = [...(action as LoadCharacterAction).payload];
-      break;
-
-    default:
-      newCharacter = currentCharacter;
+  if (action.type === CharactersActionType.loadCharacters) {
+    newCharacter = [...(action as LoadCharacterAction).payload];
+    return newCharacter;
   }
-  return newCharacter;
+  return currentCharacter;
 };
 
 export default charactersReducer;

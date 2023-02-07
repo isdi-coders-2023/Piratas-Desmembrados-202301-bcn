@@ -2,6 +2,7 @@ import { CharactersStructure } from "../../../../../data/types";
 
 export enum CharactersActionType {
   loadCharacters,
+  default,
 }
 
 export interface CharactersAction {
