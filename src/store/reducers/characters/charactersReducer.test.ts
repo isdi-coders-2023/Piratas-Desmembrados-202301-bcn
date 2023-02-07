@@ -1,4 +1,4 @@
-import { CharactersActionType } from "../../contexts/characters/actions/characters/types";
+import { CharactersActionType } from "../../actions/characters/types";
 import charactersReducer from "./charactersReducers";
 
 describe("Given a charactersReducer function", () => {

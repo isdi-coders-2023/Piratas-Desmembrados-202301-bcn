@@ -1,4 +1,4 @@
-import { CharactersStructure } from "../../../../../data/types";
+import { CharactersStructure } from "../../../data/types";
 import { CharactersActionType, LoadCharacterAction } from "./types";
 
 export const loadCharactersActionCreator = (
