@@ -17,4 +17,4 @@ export interface CharacterStructure {
   image: string;
 }
 
-export type CharactersStructure = CharactersStructure[];
+export type CharactersStructure = CharacterStructure[];
