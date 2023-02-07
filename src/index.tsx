@@ -5,6 +5,7 @@ import "../node_modules/@fontsource/source-code-pro/600.css";
 import "../node_modules/@fontsource/source-code-pro/400.css";
 import App from "./App";
 import { GlobalStyles } from "./styles/GlobalStyles";
+import CharacterContextProvider from "./store/contexts/characters/CharacterContextProvider";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -12,6 +13,8 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <GlobalStyles />
-    <App />
+    <CharacterContextProvider>
+      <App />
+    </CharacterContextProvider>
   </React.StrictMode>
 );
