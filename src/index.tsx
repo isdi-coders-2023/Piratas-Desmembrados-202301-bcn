@@ -12,8 +12,8 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <GlobalStyles />
     <CharacterContextProvider>
+      <GlobalStyles />
       <App />
     </CharacterContextProvider>
   </React.StrictMode>
