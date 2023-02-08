@@ -8,7 +8,7 @@ const App = (): JSX.Element => {
     (async () => getCharactersData())();
   }, [getCharactersData]);
 
-  return <div className="container"></div>;
+  return <div className="{container}"></div>;
 };
 
 export default App;
