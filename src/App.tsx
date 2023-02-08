@@ -5,8 +5,8 @@ const App = (): JSX.Element => {
   const { getCharactersData } = useReciveCharactersData();
 
   useEffect(() => {
-    getCharactersData();
-  });
+    (async () => getCharactersData())();
+  }, [getCharactersData]);
 
   return <div className="container"></div>;
 };
