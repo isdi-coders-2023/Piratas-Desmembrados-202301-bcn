@@ -8,7 +8,7 @@ const App = (): JSX.Element => {
     getCharactersData();
   });
 
-  return <div className="container" data-testid="AppContainer"></div>;
+  return <div className="container"></div>;
 };
 
 export default App;
