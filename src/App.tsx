@@ -1,9 +1,9 @@
 import { useEffect } from "react";
-import { useReciveCharactersData } from "./hooks/useReciveCharactersData/useReciveCharactersData";
+import { useReceiveCharactersData } from "./hooks/useReciveCharactersData/useReceiveCharactersData";
 import HeaderStyle from "./components/Header/Header";
 
 const App = (): JSX.Element => {
-  const { getCharactersData } = useReciveCharactersData();
+  const { getCharactersData } = useReceiveCharactersData();
 
   useEffect(() => {
     (async () => getCharactersData())();

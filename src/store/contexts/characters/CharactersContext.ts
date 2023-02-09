@@ -2,11 +2,13 @@ import { createContext } from "react";
 import { CharacterStructure } from "../../../data/types";
 import { CharactersAction } from "../../actions/characters/types";
 
-interface CharactersContextStructure {
+export interface CharactersContextStructure {
   characters: CharacterStructure[];
   dispatch: React.Dispatch<CharactersAction>;
 }
 
-const CharactersContext = createContext({} as CharactersContextStructure);
+const CharactersContext = createContext<CharactersContextStructure>(
+  {} as CharactersContextStructure
+);
 
 export default CharactersContext;
