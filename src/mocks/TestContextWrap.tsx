@@ -1,18 +1,20 @@
 import CharactersContext, {
   CharactersContextStructure,
 } from "../store/contexts/characters/CharactersContext";
+import { GlobalStyles } from "../styles/GlobalStyles";
 
-export interface TestContextWrapperProps {
+export interface TestContextWrapProps {
   mockStore: CharactersContextStructure;
   children: JSX.Element | JSX.Element[];
 }
 
-export const TestContextWrapper = ({
+export const TestContextWrap = ({
   children,
   mockStore,
-}: TestContextWrapperProps): JSX.Element => {
+}: TestContextWrapProps): JSX.Element => {
   return (
     <CharactersContext.Provider value={mockStore}>
+      <GlobalStyles />
       {children}
     </CharactersContext.Provider>
   );
