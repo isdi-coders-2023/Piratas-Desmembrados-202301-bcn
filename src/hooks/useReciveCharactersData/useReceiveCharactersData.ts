@@ -13,9 +13,8 @@ export const useReceiveCharactersData =
 
     const getCharactersData = useCallback(async () => {
       const response = await fetch(process.env.REACT_APP_API_URL!);
-      const characters =
-        (await response.json()) as RickAndMortyApiDataStructure;
-      dispatch(loadApiDataActionCreator(characters));
+      const apiData = (await response.json()) as RickAndMortyApiDataStructure;
+      dispatch(loadApiDataActionCreator(apiData));
     }, [dispatch]);
 
     return { getCharactersData };
