@@ -1,9 +1,9 @@
-export interface RickAndMortyApiResponseStructure {
-  info: RickAndMortyInfoApiStructure;
+export interface RickAndMortyApiDataStructure {
+  info: InfoApiStructure;
   results: CharacterStructure[];
 }
 
-export interface RickAndMortyInfoApiStructure {
+export interface InfoApiStructure {
   count: number;
   pages: number;
   next: string | null;

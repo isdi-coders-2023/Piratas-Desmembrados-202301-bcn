@@ -1,4 +1,4 @@
-import { loadCharactersActionCreator } from "./charactersActionCreator";
+import { loadApiDataActionCreator } from "./charactersActionCreator";
 import { CharactersActionType } from "./types";
 
 describe("Given a loadCharactersActionCreator function", () => {
@@ -52,7 +52,7 @@ describe("Given a loadCharactersActionCreator function", () => {
         ],
       };
 
-      const actualResult = loadCharactersActionCreator(characters);
+      const actualResult = loadApiDataActionCreator(characters);
 
       expect(actualResult).toStrictEqual(expectedResult);
     });

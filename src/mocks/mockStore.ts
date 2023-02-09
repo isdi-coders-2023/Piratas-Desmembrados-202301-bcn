@@ -2,7 +2,7 @@ import { CharactersStructure } from "../data/types";
 import {
   CharactersAction,
   CharactersActionType,
-  LoadCharacterAction,
+  LoadApiResponseCharacterAction,
 } from "../store/actions/characters/types";
 import { CharactersContextStructure } from "../store/contexts/characters/CharactersContext";
 
@@ -11,7 +11,7 @@ export const characters = [] as CharactersStructure;
 
 export const mockStore: CharactersContextStructure = { characters, dispatch };
 
-export const mockAction: LoadCharacterAction = {
+export const mockAction: LoadApiResponseCharacterAction = {
   type: CharactersActionType.loadCharacters,
   payload: characters,
 };

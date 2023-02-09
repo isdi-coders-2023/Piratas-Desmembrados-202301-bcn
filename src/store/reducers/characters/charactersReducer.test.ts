@@ -1,6 +1,6 @@
 import { CharactersActionType } from "../../actions/characters/types";
 import charactersReducer from "./charactersReducers";
-import { loadCharactersActionCreator } from "../../actions/characters/charactersActionCreator";
+import { loadApiDataActionCreator } from "../../actions/characters/charactersActionCreator";
 
 describe("Given a charactersReducer function", () => {
   describe("When it receives a loadCharacters action a list of 2 characters in the payload", () => {
@@ -28,7 +28,7 @@ describe("Given a charactersReducer function", () => {
           image: "",
         },
       ];
-      const action = loadCharactersActionCreator(characters);
+      const action = loadApiDataActionCreator(characters);
 
       const currentResult = charactersReducer(characters, action);
 

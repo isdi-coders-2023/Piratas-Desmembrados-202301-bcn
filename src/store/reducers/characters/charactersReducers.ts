@@ -2,7 +2,7 @@ import { CharactersStructure } from "../../../data/types";
 import {
   CharactersAction,
   CharactersActionType,
-  LoadCharacterAction,
+  LoadApiResponseCharacterAction,
 } from "../../actions/characters/types";
 
 const charactersReducer = (
@@ -12,7 +12,7 @@ const charactersReducer = (
   let newCharacter: CharactersStructure;
 
   if (action.type === CharactersActionType.loadCharacters) {
-    newCharacter = [...(action as LoadCharacterAction).payload];
+    newCharacter = [...(action as LoadApiResponseCharacterAction).payload];
     return newCharacter;
   }
   return currentCharacter;
