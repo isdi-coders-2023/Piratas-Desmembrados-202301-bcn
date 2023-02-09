@@ -11,10 +11,13 @@ const CharacterContextProvider = ({
 }: CharactersContextProviderProps): JSX.Element => {
   const [characters, dispatch] = useReducer(charactersReducer, []);
 
-  const getCharacter = useMemo(() => ({ characters, dispatch }), [characters]);
+  const characterStore = useMemo(
+    () => ({ characters, dispatch }),
+    [characters]
+  );
 
   return (
-    <CharactersContext.Provider value={getCharacter}>
+    <CharactersContext.Provider value={characterStore}>
       {children}
     </CharactersContext.Provider>
   );
