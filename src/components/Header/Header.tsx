@@ -6,15 +6,15 @@ const Header = (): JSX.Element => {
       <img
         src="img/title-gun.png"
         alt="page logo"
-        width="48"
-        height="28"
+        width="64"
+        height="25"
         className="header__logo-img"
       />
       <img
         src="img/rick-morty-name.png"
         alt="rick and morty name"
-        width="171"
-        height="48"
+        width="160"
+        height="54"
       />
     </HeaderStyle>
   );
