@@ -1,5 +1,5 @@
 export interface RickAndMortyApiDataStructure {
-  info: InfoApiStructure;
+  info?: InfoApiStructure;
   results: CharacterStructure[];
 }
 
