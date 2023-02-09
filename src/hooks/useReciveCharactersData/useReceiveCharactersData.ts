@@ -4,18 +4,18 @@ import { loadApiDataActionCreator } from "../../store/actions/characters/charact
 import CharactersContext from "../../store/contexts/characters/CharactersContext";
 
 export interface UseReceiveCharactersDataStructure {
-  getCharactersData: () => void;
+  getRickApiData: () => void;
 }
 
 export const useReceiveCharactersData =
   (): UseReceiveCharactersDataStructure => {
     const { dispatch } = useContext(CharactersContext);
 
-    const getCharactersData = useCallback(async () => {
+    const getRickApiData = useCallback(async () => {
       const response = await fetch(process.env.REACT_APP_API_URL!);
       const apiData = (await response.json()) as RickAndMortyApiDataStructure;
       dispatch(loadApiDataActionCreator(apiData));
     }, [dispatch]);
 
-    return { getCharactersData };
+    return { getRickApiData };
   };
