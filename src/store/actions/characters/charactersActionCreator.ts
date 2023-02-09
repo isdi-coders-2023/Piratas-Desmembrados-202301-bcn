@@ -1,9 +1,12 @@
-import { CharactersStructure } from "../../../data/types";
-import { CharactersActionType, LoadCharacterAction } from "./types";
+import { RickAndMortyApiDataStructure } from "../../../data/types";
+import {
+  CharactersActionType,
+  LoadApiResponseCharacterAction as LoadApiDataCharacterAction,
+} from "./types";
 
-export const loadCharactersActionCreator = (
-  characters: CharactersStructure
-): LoadCharacterAction => ({
-  type: CharactersActionType.loadCharacters,
-  payload: characters,
+export const loadApiDataActionCreator = (
+  apiData: RickAndMortyApiDataStructure
+): LoadApiDataCharacterAction => ({
+  type: CharactersActionType.loadApiDataResponse,
+  payload: apiData,
 });

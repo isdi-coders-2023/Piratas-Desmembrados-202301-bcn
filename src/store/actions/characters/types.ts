@@ -1,7 +1,7 @@
-import { CharactersStructure } from "../../../data/types";
+import { RickAndMortyApiDataStructure } from "../../../data/types";
 
 export enum CharactersActionType {
-  loadCharacters,
+  loadApiDataResponse,
   default,
 }
 
@@ -10,6 +10,6 @@ export interface CharactersAction {
   payload?: unknown;
 }
 
-export interface LoadCharacterAction extends CharactersAction {
-  payload: CharactersStructure;
+export interface LoadApiResponseCharacterAction extends CharactersAction {
+  payload: RickAndMortyApiDataStructure;
 }

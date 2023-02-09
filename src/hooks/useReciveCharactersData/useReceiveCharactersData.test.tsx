@@ -2,15 +2,14 @@ import { renderHook } from "@testing-library/react";
 import { act } from "react-dom/test-utils";
 import { mockAction, mockDispatch, mockStore } from "../../mocks/mockStore";
 import { TestContextWrap } from "../../mocks/TestContextWrap";
-
 import { useReceiveCharactersData } from "./useReceiveCharactersData";
 
 describe("Given the hook useReceieveCharactersData", () => {
-  describe("When it calls the function getCharactersData", () => {
+  describe("When it calls the function getRicksData", () => {
     test("Then it should invoque dispatch", async () => {
       const {
         result: {
-          current: { getCharactersData },
+          current: { getRickApiData },
         },
       } = renderHook(useReceiveCharactersData, {
         wrapper: ({ children }) => {
@@ -21,7 +20,7 @@ describe("Given the hook useReceieveCharactersData", () => {
       });
 
       await act(async () => {
-        await getCharactersData();
+        await getRickApiData();
       });
 
       expect(mockDispatch).toHaveBeenCalledWith(mockAction);

@@ -1,9 +1,9 @@
 import { createContext } from "react";
-import { CharacterStructure } from "../../../data/types";
+import { RickAndMortyApiDataStructure } from "../../../data/types";
 import { CharactersAction } from "../../actions/characters/types";
 
 export interface CharactersContextStructure {
-  characters: CharacterStructure[];
+  characters: RickAndMortyApiDataStructure;
   dispatch: React.Dispatch<CharactersAction>;
 }
 

@@ -3,11 +3,11 @@ import { useReceiveCharactersData } from "./hooks/useReciveCharactersData/useRec
 import HeaderStyle from "./components/Header/Header";
 
 const App = (): JSX.Element => {
-  const { getCharactersData } = useReceiveCharactersData();
+  const { getRickApiData } = useReceiveCharactersData();
 
   useEffect(() => {
-    (async () => getCharactersData())();
-  }, [getCharactersData]);
+    (async () => getRickApiData())();
+  }, [getRickApiData]);
 
   return (
     <>
