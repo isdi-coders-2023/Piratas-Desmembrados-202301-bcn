@@ -62,6 +62,7 @@ const CharacterCard = styled.div`
       & span:first-child {
         font-weight: 700;
         grid-column: 1/2;
+        font-size: 25px;
       }
 
       & > :nth-child(n) {
@@ -85,6 +86,7 @@ const CharacterCard = styled.div`
       & span:first-child {
         font-weight: 700;
         grid-column: 1/2;
+        font-size: 25px;
       }
     }
   }
