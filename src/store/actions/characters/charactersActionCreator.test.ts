@@ -1,58 +1,32 @@
-import { loadCharactersActionCreator } from "./charactersActionCreator";
+import { loadApiDataActionCreator } from "./charactersActionCreator";
 import { CharactersActionType } from "./types";
 
 describe("Given a loadCharactersActionCreator function", () => {
-  describe("When is invoke with two characters", () => {
-    test("Then it should return a list of two characters", () => {
-      const characters = [
-        {
-          id: 1,
-          name: "",
-          status: "",
-          species: "",
-          gender: "",
-          origin: { name: "" },
-          location: { name: "" },
-          image: "",
+  describe("When is invoked with the api data", () => {
+    test("Then it should return same api data", () => {
+      const apiData = {
+        info: {
+          count: 826,
+          pages: 42,
+          next: "https://rickandmortyapi.com/api/character?page=2",
+          prev: null,
         },
-        {
-          id: 2,
-          name: "",
-          status: "",
-          species: "",
-          gender: "",
-          origin: { name: "" },
-          location: { name: "" },
-          image: "",
-        },
-      ];
+        results: [],
+      };
       const expectedResult = {
-        type: CharactersActionType.loadCharacters,
-        payload: [
-          {
-            id: 1,
-            name: "",
-            status: "",
-            species: "",
-            gender: "",
-            origin: { name: "" },
-            location: { name: "" },
-            image: "",
+        type: CharactersActionType.loadApiDataResponse,
+        payload: {
+          info: {
+            count: 826,
+            pages: 42,
+            next: "https://rickandmortyapi.com/api/character?page=2",
+            prev: null,
           },
-          {
-            id: 2,
-            name: "",
-            status: "",
-            species: "",
-            gender: "",
-            origin: { name: "" },
-            location: { name: "" },
-            image: "",
-          },
-        ],
+          results: [],
+        },
       };
 
-      const actualResult = loadCharactersActionCreator(characters);
+      const actualResult = loadApiDataActionCreator(apiData);
 
       expect(actualResult).toStrictEqual(expectedResult);
     });

@@ -1,4 +1,5 @@
 import { useMemo, useReducer } from "react";
+import { RickAndMortyApiDataStructure } from "../../../data/types";
 import charactersReducer from "../../reducers/characters/charactersReducers";
 import CharactersContext from "./CharactersContext";
 
@@ -9,7 +10,10 @@ interface CharactersContextProviderProps {
 const CharacterContextProvider = ({
   children,
 }: CharactersContextProviderProps): JSX.Element => {
-  const [characters, dispatch] = useReducer(charactersReducer, []);
+  const [characters, dispatch] = useReducer(
+    charactersReducer,
+    {} as RickAndMortyApiDataStructure
+  );
 
   const characterStore = useMemo(
     () => ({ characters, dispatch }),

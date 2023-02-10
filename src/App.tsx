@@ -1,20 +1,18 @@
 import { useEffect } from "react";
 import { useReceiveCharactersData } from "./hooks/useReciveCharactersData/useReceiveCharactersData";
 import HeaderStyle from "./components/Header/Header";
-import Character from "./components/Character/Character";
 
 const App = (): JSX.Element => {
-  const { getCharactersData } = useReceiveCharactersData();
+  const { getRickApiData } = useReceiveCharactersData();
 
   useEffect(() => {
-    (async () => getCharactersData())();
-  }, [getCharactersData]);
+    (async () => getRickApiData())();
+  }, [getRickApiData]);
 
   return (
     <>
       <div className="container">
         <HeaderStyle />
-        <Character></Character>
       </div>
     </>
   );

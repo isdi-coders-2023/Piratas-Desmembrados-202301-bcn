@@ -1,21 +1,21 @@
-import { CharactersStructure } from "../../../data/types";
+import { RickAndMortyApiDataStructure } from "../../../data/types";
 import {
   CharactersAction,
   CharactersActionType,
-  LoadCharacterAction,
+  LoadApiResponseCharacterAction,
 } from "../../actions/characters/types";
 
 const charactersReducer = (
-  currentCharacter: CharactersStructure,
+  currentApiData: RickAndMortyApiDataStructure,
   action: CharactersAction
-): CharactersStructure => {
-  let newCharacter: CharactersStructure;
+): RickAndMortyApiDataStructure => {
+  let newApiData: RickAndMortyApiDataStructure;
 
-  if (action.type === CharactersActionType.loadCharacters) {
-    newCharacter = [...(action as LoadCharacterAction).payload];
-    return newCharacter;
+  if (action.type === CharactersActionType.loadApiDataResponse) {
+    newApiData = { ...(action as LoadApiResponseCharacterAction).payload };
+    return newApiData;
   }
-  return currentCharacter;
+  return currentApiData;
 };
 
 export default charactersReducer;
