@@ -5,20 +5,21 @@ import CharactersContext from "./store/contexts/characters/CharactersContext";
 import Characters from "./components/Characters/Characters";
 
 const App = (): JSX.Element => {
-  const {
-    characters: { results },
-  } = useContext(CharactersContext);
   const { getRickApiData } = useReceiveCharactersData();
 
   useEffect(() => {
-    (async () => getRickApiData())();
+    getRickApiData();
   }, [getRickApiData]);
+
+  const {
+    characters: { results },
+  } = useContext(CharactersContext);
 
   return (
     <>
       <div className="container">
         <HeaderStyle />
-        <Characters characters={results}></Characters>
+        {results ? <Characters results={results}></Characters> : "loading"}
       </div>
     </>
   );
