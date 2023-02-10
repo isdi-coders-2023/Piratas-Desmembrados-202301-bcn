@@ -1,11 +1,10 @@
 import { CharactersActionType } from "../../actions/characters/types";
-
 import { loadApiDataActionCreator } from "../../actions/characters/charactersActionCreator";
 import charactersReducer from "./charactersReducers";
 
 describe("Given a charactersReducer function", () => {
   describe("When it receives a loadCharacters action a list of 2 characters in the payload", () => {
-    test("Then it should return a list of 2 characters", () => {
+    test("Then it should return the received list", () => {
       const apiData = {
         info: {
           count: 826,
@@ -65,7 +64,7 @@ describe("Given a charactersReducer function", () => {
       };
 
       const action = {
-        type: CharactersActionType.default,
+        type: "" as unknown as CharactersActionType,
       };
 
       const currentResult = charactersReducer(apiData, action);

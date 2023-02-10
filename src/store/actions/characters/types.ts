@@ -2,7 +2,6 @@ import { RickAndMortyApiDataStructure } from "../../../data/types";
 
 export enum CharactersActionType {
   loadApiDataResponse,
-  default,
 }
 
 export interface CharactersAction {
