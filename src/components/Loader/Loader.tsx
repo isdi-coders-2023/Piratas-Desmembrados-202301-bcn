@@ -6,9 +6,13 @@ const Loader = (): JSX.Element => {
       <img
         className="loader__image"
         alt="Rick and Morty falling through a portal"
-        srcSet="img/loader.webp"
+        src="img/loader.webp"
       ></img>
-      <div className="loader__balls jelly-triangle">
+      <div
+        aria-label="The page is loading"
+        role="dialog"
+        className="loader__balls jelly-triangle"
+      >
         <div className="jelly-triangle__dot"></div>
         <div className="jelly-triangle__traveler"></div>
       </div>
