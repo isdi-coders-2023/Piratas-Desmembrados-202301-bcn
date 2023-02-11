@@ -12,8 +12,8 @@ export const Burger = (): JSX.Element => {
   return (
     <>
       <BurgerStyled
-        role="burger"
-        aria-label="Navigation menu"
+        role="button"
+        aria-pressed="false"
         onClick={changeBurgerState}
         open={open}
       >

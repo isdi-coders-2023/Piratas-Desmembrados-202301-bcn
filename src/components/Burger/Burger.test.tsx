@@ -7,9 +7,7 @@ describe("Given a Burger component", () => {
     test("Then it should show three lines", () => {
       render(<Burger />);
 
-      const burger = screen.getByRole("burger", {
-        name: "Navigation menu",
-      });
+      const burger = screen.getByRole("button", {});
 
       userEvent.click(burger);
       expect(burger).toBeInTheDocument();
