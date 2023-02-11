@@ -2,7 +2,7 @@ import { createContext } from "react";
 import { UiAction } from "../../actions/ui/types";
 
 export interface UiContextStructure {
-  isLoading: Boolean;
+  isLoading: boolean;
   dispatch: React.Dispatch<UiAction>;
 }
 
