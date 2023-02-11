@@ -36,6 +36,7 @@ describe("Given a charactersReducer function", () => {
       expect(currentResult).toStrictEqual(apiData);
     });
   });
+
   describe("When it receives a list of 1 character", () => {
     test("The it should return a list of 1 character", () => {
       const apiData = {

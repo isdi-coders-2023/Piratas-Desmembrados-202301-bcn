@@ -1,5 +1,8 @@
 import { UiActionType } from "../../actions/ui/types";
-import { setLoaderOnAction } from "../../actions/ui/uiActionCreator";
+import {
+  setLoaderOffAction,
+  setLoaderOnAction,
+} from "../../actions/ui/uiActionCreator";
 import uiReducer from "./uiReducer";
 
 describe("Given the uiReducer function", () => {
@@ -19,13 +22,14 @@ describe("Given the uiReducer function", () => {
     test("Then it should return false", () => {
       const isLoading = false;
 
-      const uiAction = setLoaderOnAction();
+      const uiAction = setLoaderOffAction();
 
       const result = uiReducer(isLoading, uiAction);
 
-      expect(result).toBeTruthy();
+      expect(result).toBeFalsy();
     });
   });
+
   describe("When it recieves an unset action", () => {
     test("Then it should return the same value of isLoading", () => {
       const isLoading = true;
