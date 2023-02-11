@@ -16,9 +16,7 @@ describe("Given a Character component", () => {
         image: "",
       };
       render(<Character character={character} />);
-      const expectedResult = screen.getByRole("img", {
-        name: textImage,
-      });
+      const expectedResult = screen.getByAltText(textImage);
 
       expect(expectedResult).toBeInTheDocument();
     });
