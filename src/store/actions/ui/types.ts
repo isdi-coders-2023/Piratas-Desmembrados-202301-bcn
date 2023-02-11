@@ -1,5 +1,6 @@
 export enum UiActionType {
-  default,
+  setLoaderOn,
+  setLoaderOff,
 }
 
 export interface UiAction {
