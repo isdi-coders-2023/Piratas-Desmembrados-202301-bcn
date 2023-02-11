@@ -11,7 +11,7 @@ const CharacterCard = styled.div`
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    position: absolute;
+    position: relative;
     width: 300px;
     height: 400px;
 

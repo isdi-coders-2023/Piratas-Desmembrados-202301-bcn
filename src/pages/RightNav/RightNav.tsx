@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import RightNavStyled from "./RightNavStyled";
 
 export interface RightNavProp {
@@ -7,9 +8,9 @@ export interface RightNavProp {
 const RightNav = ({ isOpen }: RightNavProp): JSX.Element => {
   return (
     <RightNavStyled isOpen={isOpen}>
-      <li>Characters</li>
-      <li>My characters</li>
-      <li>Create characters</li>
+      <li>
+        <NavLink to="/"> Characters </NavLink>
+      </li>
     </RightNavStyled>
   );
 };

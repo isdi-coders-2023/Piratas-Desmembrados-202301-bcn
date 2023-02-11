@@ -1,4 +1,4 @@
-import Navbar from "../Navbar/Navbar";
+import Navbar from "../../pages/Navbar/Navbar";
 import HeaderStyle from "./HeaderStyled";
 
 const Header = (): JSX.Element => {

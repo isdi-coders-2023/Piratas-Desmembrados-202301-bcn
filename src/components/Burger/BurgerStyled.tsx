@@ -4,13 +4,14 @@ export const BurgerStyled = styled.div<{ open: boolean }>`
   width: 2rem;
   height: 2rem;
   position: fixed;
-  top: 15px;
+  top: 30px;
   right: 20px;
   z-index: 20;
   display: none;
   display: flex;
   justify-content: space-around;
   flex-flow: column nowrap;
+  background-color: white;
 
   div {
     width: 2rem;

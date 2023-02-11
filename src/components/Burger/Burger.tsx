@@ -1,5 +1,6 @@
 import { useState } from "react";
-import RightNav from "../RightNav/RightNav";
+import RightNav from "../../pages/RightNav/RightNav";
+
 import { BurgerStyled } from "./BurgerStyled";
 
 export const Burger = (): JSX.Element => {
