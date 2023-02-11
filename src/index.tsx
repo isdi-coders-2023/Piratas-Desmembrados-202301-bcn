@@ -9,8 +9,9 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import ErrorPage from "./pages/ErrorPage/ErrorPage";
 import App from "./App";
 import HomePage from "./pages/HomePage/HomePage";
+import MyCharacters from "./pages/MyCharacters/MyCharacters";
 
-const router = createBrowserRouter([
+export const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
@@ -21,8 +22,8 @@ const router = createBrowserRouter([
         element: <HomePage />,
       },
       {
-        path: "errorpage",
-        element: <ErrorPage />,
+        path: "mycharacters",
+        element: <MyCharacters />,
       },
     ],
   },
