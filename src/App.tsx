@@ -19,7 +19,7 @@ const App = (): JSX.Element => {
     <>
       <div className="container">
         <HeaderStyle />
-        {results ? <Characters results={results}></Characters> : "loading"}
+        {results && <Characters results={results}></Characters>}
       </div>
     </>
   );
