@@ -22,14 +22,14 @@ const CharacterCard = styled.div`
       position: absolute;
       width: 300px;
       height: 65px;
-      padding: 5px;
+      padding: 10px;
       border-radius: 12px 12px 0 0;
       background-color: #feeb70;
       box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
       font-weight: bold;
 
       & span {
-        font-size: 25px;
+        font-size: 20px;
         grid-column: 1/2;
       }
 
@@ -51,22 +51,20 @@ const CharacterCard = styled.div`
       display: grid;
       grid-template-columns: 150px 150px;
       align-items: center;
-      justify-items: center;
-      font-size: 18px;
+      align-items: center;
+      font-size: 19px;
 
       & span {
-        font-weight: 600;
         grid-column: 2/3;
+        padding-right: 10px;
+        font-weight: 600;
       }
 
       & span:first-child {
-        font-weight: 700;
         grid-column: 1/2;
-        font-size: 25px;
-      }
-
-      & > :nth-child(n) {
-        text-align: center;
+        padding-left: 10px;
+        padding-right: 0;
+        font-weight: 700;
       }
     }
 
@@ -75,18 +73,19 @@ const CharacterCard = styled.div`
       display: grid;
       grid-template-columns: 150px 150px;
       align-items: center;
-      justify-items: center;
-      font-size: 18px;
+      font-size: 19px;
 
       & span {
-        font-weight: 600;
         grid-column: 2/3;
+        padding-right: 10px;
+        font-weight: 600;
       }
 
       & span:first-child {
-        font-weight: 700;
         grid-column: 1/2;
-        font-size: 25px;
+        padding-left: 10px;
+        padding-right: 0;
+        font-weight: 700;
       }
     }
   }
