@@ -29,7 +29,7 @@ const CharacterCard = styled.div`
       font-weight: bold;
 
       & span {
-        font-size: 20px;
+        font-size: 1.25rem;
         grid-column: 1/2;
       }
 
@@ -52,7 +52,7 @@ const CharacterCard = styled.div`
       grid-template-columns: 150px 150px;
       align-items: center;
       align-items: center;
-      font-size: 19px;
+      font-size: 1.18rem;
 
       & span {
         grid-column: 2/3;
@@ -73,7 +73,7 @@ const CharacterCard = styled.div`
       display: grid;
       grid-template-columns: 150px 150px;
       align-items: center;
-      font-size: 19px;
+      font-size: 1.18rem;
 
       & span {
         grid-column: 2/3;
