@@ -12,9 +12,7 @@ describe("Given a Burger component", () => {
         </BrowserRouter>
       );
 
-      const burger = screen.getByRole("burger", {
-        name: "Navigation menu",
-      });
+      const burger = screen.getByRole("button", {});
 
       userEvent.click(burger);
       expect(burger).toBeInTheDocument();

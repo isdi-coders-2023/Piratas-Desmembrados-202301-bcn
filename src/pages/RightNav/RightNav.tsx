@@ -9,13 +9,7 @@ const RightNav = ({ isOpen }: RightNavProp): JSX.Element => {
   return (
     <RightNavStyled isOpen={isOpen}>
       <li>
-        <NavLink to="/">Characters </NavLink>
-      </li>
-      <li>
-        <NavLink to="mycharacters">My characters</NavLink>
-      </li>
-      <li>
-        <NavLink to="createcharacters">Create characters</NavLink>
+        <NavLink to="/"> Characters </NavLink>
       </li>
     </RightNavStyled>
   );
