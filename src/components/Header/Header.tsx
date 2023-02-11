@@ -1,3 +1,4 @@
+import Navbar from "../Navbar/Navbar";
 import HeaderStyle from "./HeaderStyled";
 
 const Header = (): JSX.Element => {
@@ -16,6 +17,7 @@ const Header = (): JSX.Element => {
         width="160"
         height="54"
       />
+      <Navbar />
     </HeaderStyle>
   );
 };
