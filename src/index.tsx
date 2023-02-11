@@ -10,6 +10,7 @@ import ErrorPage from "./pages/ErrorPage/ErrorPage";
 import App from "./App";
 import HomePage from "./pages/HomePage/HomePage";
 import MyCharacters from "./pages/MyCharacters/MyCharacters";
+import UiContextProvider from "./store/contexts/UiContext/UiContextProvider";
 
 export const router = createBrowserRouter([
   {
@@ -34,9 +35,11 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <CharacterContextProvider>
-      <GlobalStyles />
-      <RouterProvider router={router} />
-    </CharacterContextProvider>
+    <UiContextProvider>
+      <CharacterContextProvider>
+        <GlobalStyles />
+        <RouterProvider router={router} />
+      </CharacterContextProvider>
+    </UiContextProvider>
   </React.StrictMode>
 );
