@@ -6,6 +6,9 @@ export interface UiContextStructure {
   dispatch: React.Dispatch<UiAction>;
 }
 
-const UiContext = createContext<UiContextStructure>({} as UiContextStructure);
+const UiContext = createContext<UiContextStructure>({
+  isLoading: true,
+  dispatch: () => {},
+} as UiContextStructure);
 
 export default UiContext;
