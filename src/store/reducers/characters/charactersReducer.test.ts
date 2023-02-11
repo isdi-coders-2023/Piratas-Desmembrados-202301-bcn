@@ -1,66 +1,76 @@
 import { CharactersActionType } from "../../actions/characters/types";
+import { loadApiDataActionCreator } from "../../actions/characters/charactersActionCreator";
 import charactersReducer from "./charactersReducers";
-import { loadCharactersActionCreator } from "../../actions/characters/charactersActionCreator";
 
 describe("Given a charactersReducer function", () => {
   describe("When it receives a loadCharacters action a list of 2 characters in the payload", () => {
-    test("Then it should return a list of 2 characters", () => {
-      const characters = [
-        {
-          id: 1,
-          name: "",
-          status: "",
-          species: "",
-          gender: "",
-          origin: { name: "" },
-          location: { name: "" },
-          image: "",
+    test("Then it should return the received list", () => {
+      const apiData = {
+        info: {
+          count: 826,
+          pages: 42,
+          next: "https://rickandmortyapi.com/api/character?page=2",
+          prev: null,
         },
+        results: [
+          {
+            id: 1,
+            name: "",
+            status: "",
+            species: "",
+            gender: "",
+            origin: {
+              name: "",
+            },
+            location: {
+              name: "",
+            },
+            image: "",
+          },
+        ],
+      };
+      const action = loadApiDataActionCreator(apiData);
 
-        {
-          id: 2,
-          name: "",
-          status: "",
-          species: "",
-          gender: "",
-          origin: { name: "" },
-          location: { name: "" },
-          image: "",
-        },
-      ];
-      const action = loadCharactersActionCreator(characters);
+      const currentResult = charactersReducer(apiData, action);
 
-      const currentResult = charactersReducer(characters, action);
-
-      expect(currentResult).toStrictEqual(characters);
+      expect(currentResult).toStrictEqual(apiData);
     });
   });
+
   describe("When it receives a list of 1 character", () => {
     test("The it should return a list of 1 character", () => {
-      const newCharacter = [
-        {
-          id: 1,
-          name: "",
-          status: "",
-          species: "",
-          gender: "",
-          origin: {
-            name: "",
-          },
-          location: {
-            name: "",
-          },
-          image: "",
+      const apiData = {
+        info: {
+          count: 826,
+          pages: 42,
+          next: "https://rickandmortyapi.com/api/character?page=2",
+          prev: null,
         },
-      ];
-
-      const action = {
-        type: CharactersActionType.default,
+        results: [
+          {
+            id: 1,
+            name: "",
+            status: "",
+            species: "",
+            gender: "",
+            origin: {
+              name: "",
+            },
+            location: {
+              name: "",
+            },
+            image: "",
+          },
+        ],
       };
 
-      const currentResult = charactersReducer(newCharacter, action);
+      const action = {
+        type: "" as unknown as CharactersActionType,
+      };
 
-      expect(currentResult).toStrictEqual(newCharacter);
+      const currentResult = charactersReducer(apiData, action);
+
+      expect(currentResult).toStrictEqual(apiData);
     });
   });
 });
