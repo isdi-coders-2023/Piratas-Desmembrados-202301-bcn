@@ -11,7 +11,12 @@ export const Burger = (): JSX.Element => {
 
   return (
     <>
-      <BurgerStyled onClick={changeBurgerState} open={open}>
+      <BurgerStyled
+        role="burger"
+        aria-label="Navigation menu"
+        onClick={changeBurgerState}
+        open={open}
+      >
         <div />
         <div />
         <div />
