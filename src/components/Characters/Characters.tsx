@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { CharactersStructure } from "../../data/types";
 import Character from "../Character/Character";
 import CharactersList from "./CharactersStyled";
@@ -10,7 +11,11 @@ const Characters = ({ results }: CharactersProps): JSX.Element => {
   return (
     <CharactersList>
       {results.map((character) => (
-        <Character key={character.id} character={character} />
+        <li key={character.id}>
+          <Link to="characterdetail">
+            <Character character={character} />
+          </Link>
+        </li>
       ))}
     </CharactersList>
   );

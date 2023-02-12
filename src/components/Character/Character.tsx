@@ -18,29 +18,27 @@ const Character = ({
   useContext(CharactersContext);
 
   return (
-    <li>
-      <CharacterCard className="card">
-        <div className="card__header">
-          <span>{name}</span>
+    <CharacterCard className="card">
+      <div className="card__header">
+        <span>{name}</span>
+      </div>
+      <img
+        src={`${image}`}
+        alt={`A card with ${name}`}
+        width={300}
+        height={300}
+      />
+      <div className="card__resumed-info">
+        <div className="card__origin">
+          <span>Origin</span>
+          <span>{origin}</span>
         </div>
-        <img
-          src={`${image}`}
-          alt={`A card with ${name}`}
-          width={300}
-          height={300}
-        />
-        <div className="card__resumed-info">
-          <div className="card__origin">
-            <span>Origin</span>
-            <span>{origin}</span>
-          </div>
-          <div className="card__specie">
-            <span>Specie</span>
-            <span>{species}</span>
-          </div>
+        <div className="card__specie">
+          <span>Specie</span>
+          <span>{species}</span>
         </div>
-      </CharacterCard>
-    </li>
+      </div>
+    </CharacterCard>
   );
 };
 
