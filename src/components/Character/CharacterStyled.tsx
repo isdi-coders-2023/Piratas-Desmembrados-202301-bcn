@@ -21,7 +21,7 @@ const CharacterCard = styled.div`
       align-items: center;
       position: absolute;
       width: 300px;
-      height: 65px;
+      height: 80px;
       padding: 10px;
       border-radius: 12px 12px 0 0;
       background-color: #feeb70;
@@ -29,12 +29,8 @@ const CharacterCard = styled.div`
       font-weight: bold;
 
       & span {
-        font-size: 1.25rem;
+        font-size: 1.56rem;
         grid-column: 1/2;
-      }
-
-      & img {
-        grid-column: 2/3;
       }
     }
 
