@@ -23,8 +23,9 @@ export const useReceiveCharactersData =
       const response = await fetch(process.env.REACT_APP_API_URL!);
       const apiData = (await response.json()) as RickAndMortyApiDataStructure;
 
-      dispatchUi(setLoaderOffAction());
       dispatch(loadApiDataActionCreator(apiData));
+
+      setTimeout(() => dispatchUi(setLoaderOffAction()), 1000);
     }, [dispatch, dispatchUi]);
 
     return { getRickApiData };
