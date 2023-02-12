@@ -31,3 +31,9 @@ export const handlers = [
     );
   }),
 ];
+
+export const handlersError = [
+  rest.get(`${process.env.REACT_APP_API_URL!}`, (req, res, ctx) => {
+    return res(ctx.status(400));
+  }),
+];
