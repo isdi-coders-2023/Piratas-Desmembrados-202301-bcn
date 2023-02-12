@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 export const BurgerStyled = styled.div<{ open: boolean }>`
-  width: 2rem;
-  height: 2rem;
+  width: 32px;
+  height: 32px;
   position: fixed;
   top: 30px;
   right: 20px;
@@ -14,8 +14,8 @@ export const BurgerStyled = styled.div<{ open: boolean }>`
   background-color: white;
 
   div {
-    width: 2rem;
-    height: 0.25rem;
+    width: 32px;
+    height: 4px;
     background-color: ${({ open }) => (open ? "#ccc" : "#333")};
     border-radius: 10px;
     transform-origin: 1px;
