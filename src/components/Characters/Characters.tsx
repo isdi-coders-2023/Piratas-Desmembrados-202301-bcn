@@ -12,7 +12,7 @@ const Characters = ({ results }: CharactersProps): JSX.Element => {
     <CharactersList>
       {results.map((character) => (
         <li key={character.id}>
-          <Link to="characterdetail">
+          <Link to={`${character.id}`}>
             <Character character={character} />
           </Link>
         </li>

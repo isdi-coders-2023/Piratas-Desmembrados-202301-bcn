@@ -1,13 +1,16 @@
 import { useContext, useEffect } from "react";
+import { useParams } from "react-router-dom";
 import { useReceiveCharactersData } from "../../hooks/useReciveCharactersData/useReceiveCharactersData";
 import CharactersContext from "../../store/contexts/characters/CharactersContext";
 import CharacterDetailStyle from "./CharacterDetailStyle";
 
 const CharacterDetail = (): JSX.Element => {
-  const { getRickApiData } = useReceiveCharactersData();
+  const { id } = useParams();
+
+  const { getCharacterById } = useReceiveCharactersData();
   useEffect(() => {
-    getRickApiData();
-  }, [getRickApiData]);
+    getCharacterById(Number(id)!);
+  }, [getCharacterById, id]);
 
   const {
     characters: {
