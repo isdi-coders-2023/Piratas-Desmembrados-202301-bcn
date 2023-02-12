@@ -1,5 +1,5 @@
 import NotfoundpageStyled from "./NotFoundPageStyled";
-import Header from "../components/Header/Header";
+import Header from "../../components/Header/Header";
 
 const NotFoundPage = (): JSX.Element => {
   return (

@@ -1,5 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import App from "../../App";
+import CharacterDetail from "../../components/CharacterDetail/CharacterDetail";
 import HomePage from "../HomePage/HomePage";
 
 export const routes = [
@@ -10,6 +11,10 @@ export const routes = [
       {
         path: "/",
         element: <HomePage />,
+      },
+      {
+        path: "characterdetail",
+        element: <CharacterDetail />,
       },
     ],
   },
