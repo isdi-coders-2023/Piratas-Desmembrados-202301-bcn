@@ -3,12 +3,12 @@ import { UiAction } from "../../actions/ui/types";
 
 export interface UiContextStructure {
   isLoading: boolean;
-  dispatch: React.Dispatch<UiAction>;
+  dispatchUi: React.Dispatch<UiAction>;
 }
 
 const UiContext = createContext<UiContextStructure>({
   isLoading: true,
-  dispatch: () => {},
+  dispatchUi: () => {},
 } as UiContextStructure);
 
 export default UiContext;

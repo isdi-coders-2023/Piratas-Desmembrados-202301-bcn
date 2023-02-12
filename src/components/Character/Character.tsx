@@ -22,12 +22,6 @@ const Character = ({
       <CharacterCard className="card">
         <div className="card__header">
           <span>{name}</span>
-          <img
-            src="img/favourite-empty.png"
-            alt="Empty add to my characters"
-            width={45}
-            height={45}
-          />
         </div>
         <img
           src={`${image}`}

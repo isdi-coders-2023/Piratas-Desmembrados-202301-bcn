@@ -1,4 +1,4 @@
-import { Burger } from "../Burger/Burger";
+import { Burger } from "../../components/Burger/Burger";
 import NavbarStyled from "./NavbarStyled";
 
 const Navbar = (): JSX.Element => {
