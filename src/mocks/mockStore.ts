@@ -3,7 +3,9 @@ import {
   CharactersActionType,
   LoadApiResponseCharacterAction,
 } from "../store/actions/characters/types";
+import { UiAction } from "../store/actions/ui/types";
 import { CharactersContextStructure } from "../store/contexts/characters/CharactersContext";
+import { UiContextStructure } from "../store/contexts/UiContext/UiContext";
 
 export const dispatch: React.Dispatch<CharactersAction> = jest.fn();
 
@@ -43,3 +45,9 @@ export const mockAction: LoadApiResponseCharacterAction = {
 };
 
 export const mockDispatch = jest.spyOn(mockStore, "dispatch");
+
+export const dispatchUi: React.Dispatch<UiAction> = jest.fn();
+
+const isLoading = false;
+
+export const mockUiDispatch: UiContextStructure = { dispatchUi, isLoading };

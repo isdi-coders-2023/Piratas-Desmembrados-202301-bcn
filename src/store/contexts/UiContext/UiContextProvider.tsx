@@ -9,8 +9,8 @@ interface UiContextProviderProps {
 const UiContextProvider = ({
   children,
 }: UiContextProviderProps): JSX.Element => {
-  const [isLoading, dispatch] = useReducer(uiReducer, true);
-  const uiStore = useMemo(() => ({ isLoading, dispatch }), [isLoading]);
+  const [isLoading, dispatchUi] = useReducer(uiReducer, true);
+  const uiStore = useMemo(() => ({ isLoading, dispatchUi }), [isLoading]);
 
   return <UiContext.Provider value={uiStore}> {children}</UiContext.Provider>;
 };
