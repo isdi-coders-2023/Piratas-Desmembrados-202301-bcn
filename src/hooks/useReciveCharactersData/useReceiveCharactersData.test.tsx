@@ -1,6 +1,11 @@
 import { renderHook } from "@testing-library/react";
 import { act } from "react-dom/test-utils";
-import { mockAction, mockDispatch, mockStore } from "../../mocks/mockStore";
+import {
+  mockAction,
+  mockDispatch,
+  mockStore,
+  mockUiDispatch,
+} from "../../mocks/mockStore";
 import { TestContextWrap } from "../../mocks/TestContextWrap";
 import { useReceiveCharactersData } from "./useReceiveCharactersData";
 
@@ -14,7 +19,9 @@ describe("Given the hook useReceieveCharactersData", () => {
       } = renderHook(useReceiveCharactersData, {
         wrapper: ({ children }) => {
           return (
-            <TestContextWrap mockStore={mockStore}>{children}</TestContextWrap>
+            <TestContextWrap mockStore={mockStore} mockUiStore={mockUiDispatch}>
+              {children}
+            </TestContextWrap>
           );
         },
       });
