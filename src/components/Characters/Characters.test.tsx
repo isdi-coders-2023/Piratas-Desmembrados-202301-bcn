@@ -1,4 +1,5 @@
 import { render, screen } from "@testing-library/react";
+import { BrowserRouter } from "react-router-dom";
 import Characters from "../Characters/Characters";
 
 describe("Given a Character component", () => {
@@ -18,7 +19,11 @@ describe("Given a Character component", () => {
         },
       ];
 
-      render(<Characters results={results} />);
+      render(
+        <BrowserRouter>
+          <Characters results={results} />
+        </BrowserRouter>
+      );
       const expectedResult = screen.getByAltText(textImage);
 
       expect(expectedResult).toBeInTheDocument();
@@ -39,7 +44,11 @@ describe("Given a Character component", () => {
         },
       ];
 
-      render(<Characters results={results} />);
+      render(
+        <BrowserRouter>
+          <Characters results={results} />
+        </BrowserRouter>
+      );
       const expectedResult = screen.getByText(cardTittle);
 
       expect(expectedResult).toBeInTheDocument();
@@ -60,7 +69,11 @@ describe("Given a Character component", () => {
         },
       ];
 
-      render(<Characters results={results} />);
+      render(
+        <BrowserRouter>
+          <Characters results={results} />
+        </BrowserRouter>
+      );
       const expectedResult = screen.getByText(origin);
 
       expect(expectedResult).toBeInTheDocument();
@@ -81,7 +94,11 @@ describe("Given a Character component", () => {
         },
       ];
 
-      render(<Characters results={results} />);
+      render(
+        <BrowserRouter>
+          <Characters results={results} />
+        </BrowserRouter>
+      );
       const expectedResult = screen.getByText(species);
 
       expect(expectedResult).toBeInTheDocument();
