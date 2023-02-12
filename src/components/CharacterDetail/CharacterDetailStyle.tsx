@@ -1,11 +1,16 @@
 import styled from "styled-components";
 
 const CharacterDetailStyle = styled.div`
+  position: absolute;
+  left: 50%;
+  top: 107%;
+  transform: translate(-50%, -50%);
   width: 300px;
   height: 1180px;
   overflow: hidden;
   border-radius: 12px;
   font-size: 1.18rem;
+  z-index: -1;
 
   img {
     vertical-align: bottom;
