@@ -1,6 +1,9 @@
 import styled from "styled-components";
 
 const LoaderStyled = styled.div`
+  position: absolute;
+  top: 60%;
+  transform: translateY(-50%);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -10,9 +13,17 @@ const LoaderStyled = styled.div`
   font-size: 1.56rem;
   font-weight: bold;
   padding-top: 45px;
+  background-color: #7ac142;
 
-  .loader__text {
-    text-align: center;
+  .loader {
+    &__image {
+      position: relative;
+      top: -20%;
+      background-color: #7ac142;
+    }
+    &__text {
+      text-align: center;
+    }
   }
 
   .jelly-triangle {
@@ -21,7 +32,7 @@ const LoaderStyled = styled.div`
     --uib-color: black;
     margin: 50px 0;
 
-    position: relative;
+    position: absolute;
     height: var(--uib-size);
     width: var(--uib-size);
     filter: url("#uib-jelly-triangle-ooze");
