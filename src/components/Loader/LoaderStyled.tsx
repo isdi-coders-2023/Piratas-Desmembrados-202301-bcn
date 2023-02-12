@@ -9,7 +9,7 @@ const LoaderStyled = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 100%;
+  height: 1600px;
   font-size: 1.56rem;
   font-weight: bold;
   padding-top: 45px;

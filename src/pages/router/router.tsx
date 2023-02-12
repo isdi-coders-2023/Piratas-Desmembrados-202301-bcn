@@ -15,7 +15,7 @@ export const routes = [
         element: <HomePage />,
       },
       {
-        path: "/:id",
+        path: "/character/:id",
         element: <CharacterDetail />,
       },
     ],
