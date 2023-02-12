@@ -1,6 +1,7 @@
 import { render, screen } from "@testing-library/react";
-import { mockStore } from "../../mocks/mockStore";
+import { mockStore, mockUiDispatch } from "../../mocks/mockStore";
 import { TestContextWrap } from "../../mocks/TestContextWrap";
+
 import CharacterDetail from "./CharacterDetail";
 
 describe("Given the component CharacterDetail", () => {
@@ -9,7 +10,7 @@ describe("Given the component CharacterDetail", () => {
       const altText = "A page detail with Rick Sanchez";
 
       render(
-        <TestContextWrap mockStore={mockStore}>
+        <TestContextWrap mockStore={mockStore} mockUiStore={mockUiDispatch}>
           <CharacterDetail />
         </TestContextWrap>
       );

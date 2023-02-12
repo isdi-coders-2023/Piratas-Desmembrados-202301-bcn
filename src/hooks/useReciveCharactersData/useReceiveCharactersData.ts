@@ -15,17 +15,17 @@ export interface UseReceiveCharactersDataStructure {
 export const useReceiveCharactersData =
   (): UseReceiveCharactersDataStructure => {
     const { dispatch } = useContext(CharactersContext);
-    const { dispatch: uiDispatch } = useContext(UiContext);
+    const { dispatchUi } = useContext(UiContext);
 
     const getRickApiData = useCallback(async () => {
-      uiDispatch(setLoaderOnAction());
+      dispatchUi(setLoaderOnAction());
 
       const response = await fetch(process.env.REACT_APP_API_URL!);
       const apiData = (await response.json()) as RickAndMortyApiDataStructure;
 
-      uiDispatch(setLoaderOffAction());
+      dispatchUi(setLoaderOffAction());
       dispatch(loadApiDataActionCreator(apiData));
-    }, [dispatch, uiDispatch]);
+    }, [dispatch, dispatchUi]);
 
     return { getRickApiData };
   };
