@@ -49,9 +49,9 @@ const CharacterCard = styled.div`
       width: 300px;
       display: grid;
       grid-template-columns: 150px 150px;
-      align-items: center;
-      align-items: center;
+      justify-items: center;
       font-size: 1.18rem;
+      align-items: center;
 
       & span {
         grid-column: 2/3;
@@ -64,6 +64,7 @@ const CharacterCard = styled.div`
         padding-left: 10px;
         padding-right: 0;
         font-weight: 700;
+        font-size: larger;
       }
     }
 
@@ -71,6 +72,7 @@ const CharacterCard = styled.div`
       width: 300px;
       display: grid;
       grid-template-columns: 150px 150px;
+      justify-items: center;
       align-items: center;
       font-size: 1.18rem;
 
@@ -85,6 +87,7 @@ const CharacterCard = styled.div`
         padding-left: 10px;
         padding-right: 0;
         font-weight: 700;
+        font-size: larger;
       }
     }
   }
