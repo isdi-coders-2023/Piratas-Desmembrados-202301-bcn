@@ -25,6 +25,7 @@ ul {
   list-style: none;
   padding-left: 0;
   margin: 0;
+  padding-bottom: 20px;
 }
 
 button, input  {
