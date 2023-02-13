@@ -19,7 +19,6 @@ const CharacterCard = styled.div`
       display: grid;
       justify-content: space-between;
       align-items: center;
-      position: absolute;
       width: 300px;
       height: 65px;
       padding: 10px;
