@@ -21,7 +21,7 @@ const CharacterCard = styled.div`
       align-items: center;
       width: 300px;
       height: 65px;
-      padding: 10px;
+      padding: 10px 15px;
       border-radius: 12px 12px 0 0;
       background-color: #feeb70;
       box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -61,8 +61,7 @@ const CharacterCard = styled.div`
 
       & span:first-child {
         grid-column: 1/2;
-        padding-left: 10px;
-        padding-right: 0;
+        padding-right: 35px;
         font-weight: 700;
         font-size: larger;
       }
@@ -84,8 +83,7 @@ const CharacterCard = styled.div`
 
       & span:first-child {
         grid-column: 1/2;
-        padding-left: 10px;
-        padding-right: 0;
+        padding-right: 35px;
         font-weight: 700;
         font-size: larger;
       }
