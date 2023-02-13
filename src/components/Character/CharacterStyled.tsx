@@ -57,6 +57,7 @@ const CharacterCard = styled.div`
         grid-column: 2/3;
         padding-right: 10px;
         font-weight: 600;
+        text-align: center;
       }
 
       & span:first-child {
